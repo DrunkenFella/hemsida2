@@ -13,7 +13,7 @@ const admin = require(path.join(__dirname, 'admin/admin'));
 
 app.use('/admin', admin);
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { /*index: false,*/ extensions: ['html'] }));
 
 app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.join(__dirname, '/assets/images/favicon.ico'))

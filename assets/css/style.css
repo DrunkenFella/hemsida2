@@ -1,17 +1,56 @@
+@import "color.css";
+
 header {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
-    background: #103552;
+    background: var(--background);
+}
+
+.categorys {
+    font-size: large;
+    font-weight: bolder;
+    color: var(--text);
+}
+
+.categorys:hover {
+    color: var(--hover);
+    opacity: 0.7;
+}
+
+.search {
+    padding: 10px;
+    border-radius: 50px;
+    width: calc(100% - 20px) !important;
+    border: 0px;
+}
+
+.search:focus {
+    background-color: var(--hover);
+}
+
+.newGame {
+    font-size: large;
+    font-weight: bolder;
+    color: var(--text);
+}
+
+.newGame:hover {
+    color: #A5C1D7;
 }
 
 .interface {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .interface * {
@@ -22,7 +61,21 @@ body {
     text-align: right;
 }
 
-.login > a {
-    color: aliceblue;
+.login>a {
+    color: var(--text);
     width: 100%;
+}
+
+.login {
+    color: var(--text);
+    text-align: right;
+}
+
+
+.login>a:hover {
+    color: var(--hover);
+}
+
+* {
+    outline: 1px solid red;
 }

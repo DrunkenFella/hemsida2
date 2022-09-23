@@ -1,0 +1,13 @@
+:root {
+    --gray: #33434f;
+    --background: #103552;
+    --hover: #A5C1D7;
+    --text: white;
+}
+
+/*@media (prefers-color-scheme: light) {
+    :root {
+        --background: white;
+        --text: black;
+    }
+}*/
