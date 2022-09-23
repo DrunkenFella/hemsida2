@@ -1,0 +1,28 @@
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+body {
+    background: #103552;
+}
+
+.interface {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.interface * {
+    width: 100%;
+}
+
+.interface>.login {
+    text-align: right;
+}
+
+.login > a {
+    color: aliceblue;
+    width: 100%;
+}
