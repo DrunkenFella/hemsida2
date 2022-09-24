@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/signInUp.css">
+    <script defer>
+        function onChange() {
+            const password = document.querySelector('input[name=password]');
+            const confirm = document.querySelector('input[name=confirmPassword]');
+            if (confirm.value === password.value) {
+                confirm.setCustomValidity('');
+            } else {
+                confirm.setCustomValidity('Passwords do not match');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -24,9 +35,11 @@
             <label for="username">Username:</label>
             <input placeholder="Username" class="Username" type="username" name="username" id="username">
             <label for="password">Password:</label>
-            <input placeholder="Password" class="password" type="password" name="password" id="password">
+            <input placeholder="Password" class="password" type="password" name="password" id="password"
+                onchange="onChange()">
             <label for="confirmPassword">Confirm Password:</label>
-            <input placeholder="Confirm Password" class="password" type="password" name="confirmPassword" id="password">
+            <input placeholder="Confirm Password" class="password" type="password" name="confirmPassword" id="password"
+                onchange="onChange()">
             <input type="submit" value="Sign Up">
         </form>
     </main>

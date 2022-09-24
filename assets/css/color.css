@@ -3,6 +3,12 @@
     --background: #103552;
     --hover: #A5C1D7;
     --text: white;
+    --button: #2987CF;
+    --background2: #1F669C;
+}
+
+* {
+    outline: 1px solid red;
 }
 
 /*@media (prefers-color-scheme: light) {

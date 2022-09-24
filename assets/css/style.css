@@ -12,7 +12,8 @@ header {
 }
 
 body {
-    background: var(--background);
+    background: radial-gradient(circle farthest-corner at 0 0, var(--background2), var(--background));
+    height: calc(100vh - 16px);
 }
 
 .categorys {
@@ -76,8 +77,3 @@ body {
     color: var(--hover);
 }
 
-
-
-* {
-    outline: 1px solid red;
-}

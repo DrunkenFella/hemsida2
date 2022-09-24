@@ -1,8 +1,9 @@
 @import "color.css";
 
 body {
-    background: var(--background);
     color: var(--text);
+    background: radial-gradient(circle farthest-corner at 0 0, var(--background2), var(--background));
+    height: calc(100vh - 16px);
 }
 
 header {
@@ -38,8 +39,15 @@ input {
     margin-bottom: 15px;
     border-radius: 50px;
     padding: 10px;
+    border: 2px solid var(--gray);
 }
 
-* {
-    outline: 1px solid red;
+input[type=submit] {
+    background-color: var(--button);
+    color: var(--gray);
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hover);
 }
