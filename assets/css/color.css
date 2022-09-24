@@ -8,6 +8,14 @@
 }
 
 * {
+    line-height: 1.6;
+}
+
+::selection {
+    background-color: red;
+}
+
+/* {
     outline: 1px solid red;
 }
 

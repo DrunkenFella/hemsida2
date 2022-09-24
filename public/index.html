@@ -32,8 +32,25 @@
         </div>
     </main>
     <footer>
-
+        <dialog id="cookies">
+            <p>
+                This Website Uses Cookies
+            </p>
+            <div>
+                <button type="submit" id="confirm">
+                    Confirm
+                </button>
+            </div>
+        </dialog>
     </footer>
+    <script defer="defer">
+        const confirmButton = document.querySelector("#confirm");
+        const dialog = document.querySelector("#cookies");
+        dialog.showModal();
+        confirmButton.addEventListener("click", () => {
+            dialog.close("ok");
+        });
+    </script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 body {
     color: var(--text);
     background: radial-gradient(circle farthest-corner at 0 0, var(--background2), var(--background));
-    height: calc(100vh - 16px);
+    min-height: calc(100vh - 16px);
 }
 
 header {
@@ -20,11 +20,11 @@ header {
     font-weight: normal;
 }
 
-.home a {
+a {
     color: var(--text);
 }
 
-.home a:hover {
+a:hover {
     color: var(--hover);
 }
 
