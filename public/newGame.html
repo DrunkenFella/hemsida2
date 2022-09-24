@@ -19,7 +19,11 @@
             <input type="file" placeholder="image" onchange="previewFile()" accept="image/png, image/jpeg, image/webp">
             <img src="" height="200" alt="Image preview" />
             <input type="hidden" name="image">
-            <textarea placeholder="description" name="description"></textarea>
+            <div class="grow-wrap">
+                <textarea placeholder="description" name="description"
+                    onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+            </div>
+            <input type="submit" value="Accept">
         </form>
         <script>
             function previewFile() {

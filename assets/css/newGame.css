@@ -4,9 +4,12 @@ header {
     text-align: center;
 }
 
+h1 {
+    margin: 0;
+}
+
 input,
-img,
-textarea {
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -24,4 +27,33 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: var(--hover);
+}
+
+textarea {
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.grow-wrap {
+    display: grid;
+}
+
+.grow-wrap::after {
+    content: attr(data-replicated-value) "  ";
+    white-space: pre-wrap;
+    visibility: hidden;
+}
+
+.grow-wrap>textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.grow-wrap>textarea,
+.grow-wrap::after {
+    border: 1px solid black;
+    padding: 0.5rem;
+    font: inherit;
+    grid-area: 1 / 1 / 2 / 2;
 }
