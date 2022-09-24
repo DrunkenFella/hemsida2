@@ -44,7 +44,7 @@ body {
 }
 
 .newGame:hover {
-    color: #A5C1D7;
+    color: var(--hover);
 }
 
 .interface {
@@ -75,6 +75,8 @@ body {
 .login>a:hover {
     color: var(--hover);
 }
+
+
 
 * {
     outline: 1px solid red;

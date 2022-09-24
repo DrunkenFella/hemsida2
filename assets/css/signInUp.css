@@ -1,0 +1,45 @@
+@import "color.css";
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--text);
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.home {
+    text-align: left;
+    font-weight: normal;
+}
+
+.home a {
+    color: var(--text);
+}
+
+.home a:hover {
+    color: var(--hover);
+}
+
+main {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+* {
+    outline: 1px solid red;
+}
