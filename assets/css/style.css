@@ -1,5 +1,14 @@
 @import "color.css";
 
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover);
+}
+
 header {
     width: 100%;
     display: grid;

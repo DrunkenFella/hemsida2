@@ -28,13 +28,13 @@
             <input placeholder="Search" class="search" type="search" name="search" id="search">
         </form>
         <div class="newGame">
-            New Game
+            <a href="/newGame">New Game</a>
         </div>
     </main>
     <footer>
         <dialog id="cookies">
             <p>
-                This Website Uses Cookies
+                This Website Uses Cookies. To read more klick <a href="/cookies">here</a>
             </p>
             <div>
                 <button type="submit" id="confirm">
@@ -44,12 +44,21 @@
         </dialog>
     </footer>
     <script defer="defer">
-        const confirmButton = document.querySelector("#confirm");
-        const dialog = document.querySelector("#cookies");
-        dialog.showModal();
-        confirmButton.addEventListener("click", () => {
-            dialog.close("ok");
+        cookieOk = false;
+        document.cookie.replaceAll(' ', '').split(';').forEach((element) => {
+            if (element === 'cookieOk=true') {
+                cookieOk = true;
+            }
         });
+        if (!cookieOk) {
+            const confirmButton = document.querySelector("#confirm");
+            const dialog = document.querySelector("#cookies");
+            dialog.showModal();
+            confirmButton.addEventListener("click", () => {
+                dialog.close("ok");
+            });
+            document.cookie = 'cookieOk=true;path=/;SameSite=None;Secure';
+        }
     </script>
 </body>
 
