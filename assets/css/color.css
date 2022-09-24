@@ -20,9 +20,10 @@ body {
 ::selection {
     background-color: black;
     opacity: 0.1;
+    color: var(--text);
 }
 
-/* {
+* {
     outline: 1px solid red;
 }
 

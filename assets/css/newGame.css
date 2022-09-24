@@ -1,2 +1,27 @@
 @import "color.css";
 
+header {
+    text-align: center;
+}
+
+input,
+img,
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    padding: 10px;
+    border: 2px solid var(--gray);
+}
+
+input[type=submit] {
+    background-color: var(--button);
+    color: var(--gray);
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hover);
+}
