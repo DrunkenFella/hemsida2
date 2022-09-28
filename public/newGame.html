@@ -11,12 +11,15 @@
 
 <body>
     <header>
+        <div class="home"><a href="/">Home</a></div>
         <h1>New Game</h1>
     </header>
     <main>
         <form action="/newGame" method="post">
             <input type="text" placeholder="Title" name="title">
-            <input type="file" placeholder="image" onchange="previewFile()" accept="image/png, image/jpeg, image/webp">
+            <label for="file_upload">Upload Image</label>
+            <input name="file_upload" id="file_upload" style="opacity: 0;" type="file" placeholder="image"
+                onchange="previewFile()" accept="image/png, image/jpeg, image/webp">
             <img src="" height="200" alt="Image preview" />
             <input type="hidden" name="image">
             <div class="grow-wrap">

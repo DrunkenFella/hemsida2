@@ -7,6 +7,11 @@
     --background2: #1F669C;
 }
 
+a[target="_blank"]:after {
+    background: url(../images/bon-end.png) no-repeat;
+    content: '';
+}
+
 body {
     color: var(--text);
     background: radial-gradient(circle farthest-corner at 0 0, var(--background2), var(--background));

@@ -103,6 +103,15 @@ body {
     text-align: center;
 }
 
+#cookie-link {
+    color: var(--button);
+}
+
+#cookie-link:hover {
+    color: var(--hover);
+    text-decoration: underline;
+}
+
 #confirm {
     background-color: var(--button);
     font-weight: bold;
