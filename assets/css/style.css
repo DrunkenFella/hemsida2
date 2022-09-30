@@ -1,5 +1,26 @@
 @import "color.css";
 
+img.wide-logo {
+    text-align: center;
+    max-width: calc(100vw - 16px);
+}
+
+img.small-logo {
+    text-align: center;
+    display: none;
+    max-width: calc(100vw / 3);
+}
+
+@media (max-width: 500px) {
+    img.wide-logo {
+        display: none;
+    }
+
+    img.small-logo {
+        display: block;
+    }
+}
+
 a {
     color: var(--text);
     text-decoration: none;
@@ -55,6 +76,10 @@ body {
 
 .newGame:hover {
     color: var(--hover);
+}
+
+.category {
+    display: grid;
 }
 
 .interface {
