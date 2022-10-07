@@ -23,7 +23,7 @@
     </h1>
     <main class="interface">
         <div class="categorys">
-            Category
+            Categorys:
         </div>
         <form action="/search" method="post">
             <input placeholder="Search" class="search" type="search" name="search" id="search">
@@ -31,12 +31,14 @@
         <div class="newGame">
             <a href="/newGame">New Game</a>
         </div>
-        <h1>
-
-        </h1>
-        <div class="Chosen_Category">
-            
+        <div class="unselected-categorys"> Name</div>
+        <div class="chosen-categorys">
+            <div>
+                <button>name &#x1F5D9;</button>
+            </div>
         </div>
+
+
     </main>
     <footer>
         <dialog id="cookies">
@@ -47,6 +49,7 @@
             <div>
                 <button type="submit" id="confirm">
                     Confirm
+                </button>
             </div>
         </dialog>
     </footer>
@@ -64,7 +67,7 @@
             confirmButton.addEventListener("click", () => {
                 dialog.close("ok");
             });
-            document.cookie = 'cookieOk=true;path=/;SameSite=None;Secure';
+            document.cookie = 'cookieOk=true';//path=/;SameSite=None;Secure';
         }
     </script>
 </body>

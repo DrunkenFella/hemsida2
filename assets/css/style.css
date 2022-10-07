@@ -46,16 +46,37 @@ body {
     min-height: calc(100vh - 16px);
 }
 
+.category {}
+
 .categorys {
     font-size: large;
     font-weight: bolder;
     color: var(--text);
 }
 
-.categorys:hover {
+.chosen-categorys {
+    grid-column: span 2;
+    color: var(--button);
+    padding: 10px;
+    border-radius: 50px;
+    width: calc(100% - 20px) !important;
+    border: 0px;
+}
+
+.unselected-categorys {
+    color: var(--text);
+    grid-column: span 1;
+}
+
+.chosen-categorys:hover {
+    color: var(--hover);
+}
+
+/* .categorys h2:hover {
     color: var(--hover);
     opacity: 0.7;
-}
+} */
+
 
 .search {
     padding: 10px;

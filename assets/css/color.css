@@ -7,10 +7,12 @@
     --background2: #1F669C;
 }
 
-a[target="_blank"]:after {
-    background: url(../images/bon-end.png) no-repeat;
+/* a[target="_blank"]:after {
+    background: url(/images/new-tab.png);
     content: '';
-}
+    width: 5px;
+    height: 5px;
+} */
 
 body {
     color: var(--text);
