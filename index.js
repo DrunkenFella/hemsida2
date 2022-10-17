@@ -37,6 +37,10 @@ app.use('/admin', admin);
 app.use(express.static(path.join(__dirname, 'assets')));
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ["html"] }));
 
+app.get('/categorys', (req,res) => {
+    res.sendFile(path.join(__dirname, 'categorys.json'));
+});
+
 app.post('/signIn', (req, res) => {
     if (users.has(req.body.email)) {
         if (users.get(req.body.email).password == sha256(req.body.password + users.get(req.body.email).salt)) {

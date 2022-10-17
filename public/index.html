@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body>
@@ -22,19 +23,34 @@
 
     </h1>
     <main class="interface">
-        <div class="categorys">
-            Categorys:
-        </div>
+        <h2 class="categorys__title">Categorys:</h2>
         <form action="/search" method="post">
             <input placeholder="Search" class="search" type="search" name="search" id="search">
         </form>
-        <div class="newGame">
-            <a href="/newGame">New Game</a>
+        <a href="/newGame">
+            <h2 class="">
+                New Game
+            </h2>
+        </a>
+        <div class="unselected-categorys">
         </div>
-        <div class="unselected-categorys"> Name</div>
-        <div class="chosen-categorys">
-            <div>
-                <button>name &#x1F5D9;</button>
+        <div class="games">
+            <h2 class="chosen-categorys__hide">Chosen Categorys:</h2>
+            <div class="chosen-categorys chosen-categorys__hide">
+            </div>
+            <div class="game-list">
+                <div class="game">
+                    <h3 class="game__title">Test Game</h3>
+                    <img class="game__image" src="https://http.cat/400" alt="Game Image">
+                    <p class="game__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -70,6 +86,66 @@
             document.cookie = 'cookieOk=true';//path=/;SameSite=None;Secure';
         }
     </script>
+    <script defer>
+        const categorys = document.querySelector('.unselected-categorys');
+        const selectedCategorys = document.querySelector('.chosen-categorys');
+        function sortElement(element) {
+            html = '';
+            [...element.children].sort((a, b) => a.innerText.localeCompare(b.innerText)).forEach(item => {
+                div = document.createElement('div');
+                div.appendChild(item);
+                html += div.innerHTML;
+            });
+            element.innerHTML = html;
+        }
+        function addCategory(id) {
+            button = document.querySelector(`[id="${id}"]`);
+            button.remove();
+            item = button.id;
+            div = document.createElement('div');
+            div.innerHTML = `<div id="${item}">${item}<button onclick="removeCategory('${(item)}')">&#x1F5D9;</button></div>`;
+            selectedCategorys.appendChild(div.firstChild);
+            if (selectedCategorys.innerHTML != "") {
+                var editCSS = document.querySelector("#style");
+                editCSS.innerHTML = ".chosen-categorys__hide {}";
+            }
+            sortElement(selectedCategorys);
+        }
+        function removeCategory(id) {
+            button = document.querySelector(`[id="${id}"]`);
+            button.remove();
+            item = button.id;
+            button2 = document.createElement('button');
+            button2.setAttribute('onclick', `addCategory('${(item)}')`);
+            button2.innerText = item;
+            button2.id = item;
+            categorys.appendChild(button2);
+            if (selectedCategorys.innerHTML == "") {
+                var editCSS = document.querySelector("#style");
+                editCSS.innerHTML = ".chosen-categorys__hide {display: none !important;}";
+            }
+            sortElement(categorys);
+        }
+        fetch('/categorys')
+            .then(res => res.json())
+            .then(out => {
+                out.forEach((item) => {
+                    button = document.createElement('button');
+                    button.setAttribute('onclick', `addCategory('${(item)}')`);
+                    button.innerText = item;
+                    button.id = item;
+                    categorys.appendChild(button);
+                });
+                sortElement(categorys);
+            })
+            .catch(err => { throw err });
+
+    </script>
+    <style id="style">
+        .chosen-categorys__hide {
+            display: none;
+        }
+    </style>
 </body>
 
 </html>
