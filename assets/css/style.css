@@ -103,7 +103,6 @@ body {
     width: calc(100% - 20px) !important;
     border: 5px;
     gap: 5px;
-
 }
 
 .unselected-categorys button {

@@ -30,13 +30,6 @@ body {
     color: var(--text);
 }
 
-/* * {
+* {
     outline: 1px solid red;
-} */
-
-/*@media (prefers-color-scheme: light) {
-    :root {
-        --background: white;
-        --text: black;
-    }
-}*/
+}

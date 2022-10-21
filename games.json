@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Elden Ring",
+        "img": "./imgage/eldenring.jpeg",
+        "altImg": "alt value",
+        "categories": [
+            "Action",
+            "RPG"
+        ],
+        "description": ""
+    },
+    {
+        "title": "",
+        "img": "./image/legostarwars.jpeg",
+        "categories": [
+            "Action",
+            "Adventure",
+            "Casual",
+            "Platformer & Runner",
+            "Puzzle",
+            "Third-Person Shooter"
+        ],
+        "description": ""
+    },
+    {}
+]
