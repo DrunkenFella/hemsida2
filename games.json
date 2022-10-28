@@ -1,26 +1,67 @@
 [
     {
         "title": "Elden Ring",
-        "img": "./imgage/eldenring.jpeg",
+        "img": "/images/eldenring.jpeg",
         "altImg": "alt value",
         "categories": [
             "Action",
-            "RPG"
+            "|",
+            "Action RPG",
+            "|",
+            "Adventure",
+            "|",
+            "Adventure RPG",
+            "|",
+            "Openworld",
+            "|",
+            "Fighting & Martial Arts",
+            "|",
+            "Platformer & Runner",
+            "|",
+            "Role-Playing"
         ],
-        "description": ""
+        "description": "A game made by From Software"
     },
     {
-        "title": "",
-        "img": "./image/legostarwars.jpeg",
+        "title": "Lego Star Wars",
+        "img": "/images/legostarwars.jpg",
+        "altImg": "",
         "categories": [
             "Action",
+            "|",
             "Adventure",
+            "|",
             "Casual",
+            "|",
             "Platformer & Runner",
+            "|",
             "Puzzle",
+            "|",
             "Third-Person Shooter"
         ],
-        "description": ""
+        "description": "A game made by TT Games and Warner Bros"
     },
-    {}
+    {
+        "title": "Terraria",
+        "img": "/images/terrarialogo.jpg",
+        "altImg": "Terraria",
+        "categories": [
+            "Action",
+            "|",
+            "Action RPG",
+            "|",
+            "Casual",
+            "|",
+            "Farming & Crafting",
+            "|",
+            "Openworld",
+            "|",
+            "Platformer & Runner",
+            "|",
+            "Role-Playing",
+            "|",
+            "Sandbox & Physics"
+        ],
+        "description": "A game made by Re-Logic"
+    }
 ]

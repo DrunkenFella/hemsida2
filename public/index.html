@@ -39,21 +39,7 @@
             <div class="chosen-categorys chosen-categorys__hide">
             </div>
             <div class="game-list">
-                <div class="game">
-                    <h3 class="game__title">Elden Ring</h3>
-                    <img class="game__image" src="/images/eldenring.jpeg" alt="Game Image">
-                    <p class="game__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                        <img class="game__image" src="/images/terrarialogo.jpg" alt="Game Image">
-                    </p>
-                </div>
+
             </div>
         </div>
     </main>
@@ -141,6 +127,29 @@
             })
             .catch(err => { throw err });
 
+    </script>
+    <script>
+        gameList = document.querySelector('.game-list');
+        fetch('/games')
+            .then(res => res.json())
+            .then(out => {
+                out.forEach((item) => {
+                    game = document.createElement('div');
+                    game.setAttribute('class', `game`);
+                    categoryString = "";
+                    categoryData = "";
+                    item.categories.forEach(category => {
+                        categoryString += `<li class="game__catagory">${category}</li>`;
+                        categoryData += `${category.replaceAll(' ', '_')} `;
+                    });
+                    categoryData = categoryData.slice(0, -1);
+
+                    game.setAttribute('data-categorys', categoryData)
+                    game.innerHTML = `<h3 class="game__title">${item.title}</h3><img class="game__image" src="${item.img}" alt="${item.altImg}"><p class="game__description">${item.description}</p><ul class="game__categorys">${categoryString}</ul>`;
+                    gameList.appendChild(game);
+                });
+            })
+            .catch(err => { throw err });
     </script>
     <style id="style">
         .chosen-categorys__hide {

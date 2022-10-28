@@ -37,8 +37,12 @@ app.use('/admin', admin);
 app.use(express.static(path.join(__dirname, 'assets')));
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ["html"] }));
 
-app.get('/categorys', (req,res) => {
+app.get('/categorys', (req, res) => {
     res.sendFile(path.join(__dirname, 'categorys.json'));
+});
+
+app.get('/games', (req, res) => {
+    res.sendFile(path.join(__dirname, 'games.json'));
 });
 
 app.post('/signIn', (req, res) => {
