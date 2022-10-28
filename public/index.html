@@ -145,7 +145,7 @@
                     categoryData = categoryData.slice(0, -1);
 
                     game.setAttribute('data-categorys', categoryData)
-                    game.innerHTML = `<h3 class="game__title">${item.title}</h3><img class="game__image" src="${item.img}" alt="${item.altImg}"><p class="game__description">${item.description}</p><ul class="game__categorys">${categoryString}</ul>`;
+                    game.innerHTML = `<h3 class="game__title">${item.title}</h3><img class="game__image" src="${item.img}" alt="${item.altImg}"><p class="game__description">${item.description}</p><ul class="game__categorys">${categoryString.split('</li><li').join('</li>|<li')}</ul>`;
                     gameList.appendChild(game);
                 });
             })

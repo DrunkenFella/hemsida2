@@ -5,19 +5,12 @@
         "altImg": "alt value",
         "categories": [
             "Action",
-            "|",
             "Action RPG",
-            "|",
             "Adventure",
-            "|",
             "Adventure RPG",
-            "|",
             "Openworld",
-            "|",
             "Fighting & Martial Arts",
-            "|",
             "Platformer & Runner",
-            "|",
             "Role-Playing"
         ],
         "description": "A game made by From Software"
@@ -28,15 +21,10 @@
         "altImg": "",
         "categories": [
             "Action",
-            "|",
             "Adventure",
-            "|",
             "Casual",
-            "|",
             "Platformer & Runner",
-            "|",
             "Puzzle",
-            "|",
             "Third-Person Shooter"
         ],
         "description": "A game made by TT Games and Warner Bros"
@@ -47,19 +35,12 @@
         "altImg": "Terraria",
         "categories": [
             "Action",
-            "|",
             "Action RPG",
-            "|",
             "Casual",
-            "|",
             "Farming & Crafting",
-            "|",
             "Openworld",
-            "|",
             "Platformer & Runner",
-            "|",
             "Role-Playing",
-            "|",
             "Sandbox & Physics"
         ],
         "description": "A game made by Re-Logic"
